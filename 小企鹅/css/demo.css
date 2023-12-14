@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#main{
+    margin: 100px auto;
+    width: 700px;
+    height: 500px;
+    position: relative;
+    animation: jump 2s linear 0.5s infinite forwards;
+}
+#main div{
+    position: absolute;
+    background-image: url('../img/penguin_loading.png');
+    background-repeat: no-repeat;
+}
+
+.torso{
+    width: 210px;
+    height: 275px;
+    background-size: 290px;
+    background-position: 19px 16px;
+    left: 240px;
+    top: 20px;
+    z-index: 2;
+}
+.handL{
+    width: 117px;
+    height: 91px;
+    background-size: 290px;
+    background-position: -184px 16px;
+    left: 217px;
+    top: 134px;
+    z-index: 1;
+    animation: leftHand 2s linear infinite forwards;
+}
+.handR{
+    width: 82px;
+    height: 128px;
+    background-size: 290px;
+    background-position: -187px -75px;
+    left: 422px;
+    top: 88px;
+    z-index: 1;
+    animation: rigHand 2s linear infinite forwards;
+}
+.footL{
+    width: 93px;
+    height: 25px;
+    background-size: 290px;
+    background-position: -185px -202px;
+    left: 254px;
+    top: 265px;
+    z-index: 1;
+    animation: leftF 2s linear infinite forwards;
+}
+.footR{
+    width: 93px;
+    height: 25px;
+    background-size: 290px;
+    background-position: -187px -227px;
+    left: 352px;
+    top: 265px;
+    z-index: 1;
+    animation: rigF 2s linear infinite forwards;
+}
+
+@keyframes jump{
+    50%{
+        transform: translateY(-50px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes leftHand{
+    0%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(15deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes rigHand{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes leftF{
+    0%{
+        transform: rotate(-5deg);
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(-5deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+@keyframes rigF{
+    0%{
+        transform: rotate(5deg);
+    }
+    20%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(5deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    80%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+}
