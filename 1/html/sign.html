@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>标签</title>
+    </head>
+    <body>
+        
+        <div>
+            <!-- 块级元素 :独占一行-->
+            <!-- div标签：划分区域 -->
+            
+            <!-- 分块1 标题-->
+            <div>
+                <!-- h标签：标题标签 -->
+                <h2>吃了午饭</h2>
+                <!-- 
+                    a标签：超链接 
+                    属性：href
+                        1.链接          放置要跳转的页面路径
+                        2.#            跳回页面顶部
+                        3.空字符串      刷新当前页面
+                        4.id="xx" #xx  锚点
+                -->
+                <a href="https://www.baidu.com/?tn=15007414_8_dg">跳转</a>
+                <br><a href="#">顶部</a>
+                <br><a href="">刷新</a>
+            </div>
+            <!-- 分块2 内容-->
+            <div>
+                <!-- p标签：段落标签 -->
+                <p>小猪猪你真好</p>
+                <p>clair de lune
+                    <!-- br标签：换行 -->
+                    <!-- 
+                        b标签：加粗字体
+                        strong标签：加粗字体
+                        区别：
+                        b标签只是UI层的加粗，不具备html语义化；
+                        strong加粗具备html语义化 语气上的加粗
+                    -->
+                    <!-- 
+                        i标签： 倾斜 不具备语义化
+                        em标签：倾斜 具备语义化 强调倾斜
+                     -->
+                    <br>element<b>element</b>elementelement <i>element</i> elementelementelementelement
+                    <!-- hr标签：分割线 -->
+                    <hr>elementelement<strong>element</strong>element <em>element</em> elementelementelementelementelementelement</p>
+                    <!--  
+                        sub：下标
+                        sup：上标
+                        u：下划线
+                        s：删除线
+                    -->
+                    <hr>element<sub>element</sub>elementelementelement<sup>element</sup>elementelement<u>element</u>elementelement<s>element</s>elementelement</p>
+                    <!-- 
+                        span：定义文本块
+                     -->
+                    <hr>element<span>element</span>elementelementelementelementelementelementelementelementelementelement</p>
+                <p>想食午饭</p>
+
+                <!-- 
+                    无序列表
+                    ul li标签组成 无序列表
+                    默认样式：实心圆
+                    属性：
+                        type:square 实心正方形
+                             circle 空心圆
+                             diisc  实心圆（默认的）
+                -->
+                <ul type="disc">
+                    <li>part1</li>
+                    <li>part2</li>
+                    <li>part3</li>
+                </ul>
+
+                <!-- 
+                    有序列表 
+                    ol li标签组成 有序列表
+                    默认样式：阿拉伯数字
+                    属性：
+                        type:A 大写字母
+                             a 小写字母
+                             i 罗马数字
+                             1 阿拉伯数字
+                        start:从...开始
+                        reversed：倒序
+                -->
+                <ol type="i" start="3" reversed>
+                    <li>part3</li>
+                    <li>part2</li>
+                    <li>part1</li>
+                </ol>
+
+                <!-- 图片文件夹名称：images -->
+                <!-- 
+                    图文混排列表 
+                    dl dt dd
+                -->
+                <dl>
+                    <dt>
+                        <!-- 放置图片（只能放置一张在dt中） -->
+                        <!-- 
+                            img属于行内块元素
+                            img：图片标签 
+                                属性：
+                                    src：放置引入的图片地址
+                                        地址获取方法：
+                                        1.从网上直接获取（绝对路径）
+                                        2.本地下载引入  （相对路径）
+                                            同级目录    ./
+                                            上一级目录  ../
+                                    alt:图片无法加载时所展示的 替换文字
+                                        图片无法加载情况：
+                                        1.网络问题
+                                        2.图片违禁或侵权
+                        -->
+                        <img src="../images/3.21.jpg" alt="首图">
+                        <img src="../images/3.21.jpg" alt="首图">
+                        <img src="https://img1.baidu.com/it/u=1839135015,723795615&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="风景图">
+                    </dt>
+                    <dd>
+                        <!-- 放置文字 -->
+                        ddddddddddd
+                    </dd>
+                </dl>
+                <br><a href="#">顶部</a>
+            </div>
+
+        </div>
+
+    </body>
+</html>
