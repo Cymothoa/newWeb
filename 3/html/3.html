@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+      // let obj = {
+      //     name: 'smart',
+      //     age: 18
+      // }
+      // 参数一：需要设置或添加属性的对象
+      // 参数二： 需要设置或添加属性的值
+      // 参数三：配置对象
+      // Object.defineProperty(obj,'sex',{
+      //     value:'female'
+      // })
+      // console.log(obj,'obj')
+      // var app = new Vue({
+      //     el:"#app",
+      //     data:{
+
+      //     }
+      // })
+       var app = new Vue({
+        el:"#app",
+        data:{
+            num: 10,
+            obj:{
+                name:"印度人",sex:"男"
+            }
+        },
+        //     let num = 10; 
+        //   let obj = {name:"印度人",sex:"男"}; 
+        //   Object.defineProperty(obj,'age',{
+        //     get(){
+        //         console.log("get"); 
+        //         return num
+        //     },
+        //     set(value) {
+        //         console.log("set");
+        //         num = value;
+        //     }
+        //    })
+
+
+        // let obj = {};
+        // let obj1 = {
+        //     name: "给子",
+        //     age: 18
+        // }
+        // Object.defineProperty(obj,'age',{
+        //     get() {
+        //         console.log("get");
+        //         return obj1.age;
+        //     },
+        //     set(value) {
+        //         obj1.age = value
+        //     }
+        // })
+        // console.log(obj)
+       })
+    </script>
+  </body>
+</html>

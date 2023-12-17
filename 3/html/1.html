@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!--  -->
+        <input type="text" v-model="keyWords">
+        <ul>
+            <li v-for="(item,index) in newList" :key="index">
+                {{item.name}}__{{item.sex}}__{{item.adress}}__{{item.age}}
+            </li>
+        </ul>
+        <button @click="sortType=1">升序</button>
+        <button @click="sortType=2">降序</button>
+        <button @click="sortType=0">原序</button>
+    </div>
+    <script src="../vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                keyWords:"",
+                sortType:0,
+                person:[
+                    {
+                        name:"高聪慧",
+                        sex:"女",
+                        adress:"703",
+                        age:"19",
+                    },
+                    {
+                        name:"何大歪",
+                        sex:"女",
+                        adress:"703",
+                        age:"20",
+                    },
+                    {
+                        name:"矮蒜蠢",
+                        sex:"男",
+                        adress:"307",
+                        age:"91",
+                    },
+                    {
+                        name:"溪小正",
+                        sex:"男",
+                        adress:"307",
+                        age:"02",
+                    },
+                ],
+                // newList:[],
+            },
+            // // watch方法过滤
+            // watch:{
+            //     keyWords:{
+            //         immediate:true,
+            //         deep:true,
+            //         handler(val){
+            //             this.newList=this.person.filter((item)=>{
+            //                 return item.name.indexOf(val)!== -1;
+            //             })
+            //         }
+            //     }
+            // }
+
+            // 计算属性过滤
+            computed:{
+                newList(){
+                    const arr =  this.person.filter((item)=>{
+                        return item.name.indexOf(this.keyWords)!==-1;
+                    })
+                    if(this.sortType){
+                        arr.sort((a,b)=>{
+                            return this.sortType ===1?a.age-b.age:b.age-a.age;
+                        })
+                    }
+                    return arr;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

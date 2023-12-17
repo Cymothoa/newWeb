@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: violet;
+            color: #fff;
+            font-size: 30px;
+        }
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background: burlywood;
+        }
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background: cornflowerblue;
+        }
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background: crimson;
+        }
+        .box4 {
+            width: 150px;
+            height: 150px;
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <input type="text" @keyup.enter="showEnter">
+        <input type="text" @keydown.tab="showEnter">
+        <input type="text" @keydown.tot="showEnter">
+        <br>
+        <br>
+        <br>
+         <div class="box" v-on:click="num++">{{num}}</div>
+         <div @click="showAlert">
+            alert
+         </div>
+         <div @click="showMsg(1)">
+            message
+         </div>
+         <div @click="showEvent($event)">
+            event
+         </div>
+         <!-- 事件冒泡 -->
+         <div class="box1" @click="getMain">
+            <div class="box2" @click.stop="getMsg"></div>
+         </div>
+         <!-- 默认事件 -->
+         <a href="https://v2.cn.vuejs.org/v2/guide/events.html" @click.prevent="getSee">Vue</a>
+         <!-- 触发一次 -->
+        <div @click.once="showContent">content</div>
+        <!-- 触发自身 -->
+        <div @click.self="mySelf" class="box3">
+            <div @click="meMain" class="box4">
+                myself
+            </div>
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        // 自定义键值
+        Vue.config.keyCodes.tot = 32;
+        var app = new Vue({
+            el:"#app",
+            data:{
+                num: 0
+            },
+            methods:{
+                showAlert() {
+                    alert("出现");
+                },
+                showMsg(a) {
+                    console.log(a,'a');
+                },
+                showEvent(a) {
+                    console.log(a.target,'a1');
+                },
+                getMain() {
+                    alert(1);
+                },
+                getMsg() {
+                    alert(2);
+                },
+                getSee() {
+                    alert(3);
+                },
+                showContent() {
+                    alert("555");
+                },
+                mySelf() {
+                    alert("666");
+                },
+                meMain() {
+                    alert("777");
+                },
+                showEnter(event) {
+                    console.log(event.target.value)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
