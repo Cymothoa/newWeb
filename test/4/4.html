@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./4.css">
+</head>
+
+<body>
+    <div id="app">
+        <h3>留言内容：</h3>
+        <ol class="messageDisplay">
+            <p class="defualt">
+                <i>这里会显示留言内容......</i>
+            </p>
+            <li v-for="(item,index) in textList" :key="index">
+                {{item}}
+            </li>
+        </ol>
+        <div class="messageWrite">
+            <textarea name="write" id="write" rows="10" maxlength="50" v-model="textSimple"></textarea>
+        </div>
+        <div class="messageCount">
+            {{len}}/50
+        </div>
+        <div class="messageSubmit">
+            <button class="btn" @click="addMessage">发表留言</button>
+        </div>
+        <div class="messageDelete">
+            <button class="btn" @click="deleteMessage">删除留言</button>
+        </div>
+    </div>
+    <script src="./vue.js"></script>
+    <script src="./4.js"></script>
+</body>
+
+</html>

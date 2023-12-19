@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body h3 {
+  border-bottom: 1px solid black;
+  width: 99%;
+  margin: 0 auto;
+}
+
+body .messageDisplay {
+  border: 1px solid #ccc;
+  width: 99%;
+  margin: 10px auto;
+  padding: 10px 5px;
+}
+
+body .messageDisplay p {
+  display: flex;
+  align-items: center;
+}
+
+body .messageDisplay li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #ccc;
+}
+
+body .messageWrite {
+  margin: 0 auto;
+  width: 99%;
+}
+
+body .messageWrite #write {
+  width: 100%;
+}
+
+body .messageCount {
+  margin: 10px auto;
+  width: 99%;
+  background: #ccc;
+}
+
+body .messageSubmit {
+  margin: 0 auto;
+  width: 99%;
+}
+
+body .messageSubmit button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+body .messageDelete {
+  margin: 5px auto;
+  width: 99%;
+}
+
+body .messageDelete button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px;
+  width: 100%;
+}

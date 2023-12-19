@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function minIndex (arr){
+            let min=arr[0];
+            let minInd=0;
+            for(let i=1;i<arr.length;i++){
+                if(min>arr[i]){
+                    min = arr[i];
+                    minInd = i;
+                }
+            }
+            console.log('最小值'+min);
+            console.log('下标'+minInd);
+        }
+        minIndex([5,4,2,3]);
+    </script>
+</body>
+</html>
